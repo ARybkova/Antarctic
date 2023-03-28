@@ -384,12 +384,44 @@ template {
   display: none;
 }
 
+/*Montserrat 400*/
+
 @font-face {
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  src: url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff");
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+}
+
+/*Montserrat 500*/
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-medium.woff2") format("woff2"), url("../fonts/montserrat-medium.woff") format("woff");
+  font-display: swap;
+}
+
+/*Montserrat 600*/
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/montserrat-semi-bold.woff2") format("woff2"), url("../fonts/montserrat-semi-bold.woff") format("woff");
+  font-display: swap;
+}
+
+/*Montserrat 700*/
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
+  font-display: swap;
 }
 
 *,
@@ -547,10 +579,17 @@ button,
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  background-color: #f9fbfd;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #011c40;
 }
 
-.wrapper .header,
-.wrapper .footer {
+.wrapper .main-header,
+.wrapper .main-footer {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -614,9 +653,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 103px;
 }
 
 .btn {
@@ -687,21 +726,15 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    padding: 0 45px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 15px;
   }
 }
 
