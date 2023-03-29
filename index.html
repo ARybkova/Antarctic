@@ -4,20 +4,138 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
+    <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semi-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <meta name="description" content="Занимаемся организацией круизов и экскурсионных туров в Антарктику, имеется возможность раннего бронирования.">
+    <title>Cruises to Antarctica</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
+      <header class="main-header">
+        <div class="main-header__overlay"></div>
+        <div class="main-header__container container">
+          <nav class="main-header__navigation navigation navigation--closed">
+            <div class="navigation__logo">
+              <a class="navigation__logo-link" href="#">
+                <svg class="navigation__logo-img" width="70" height="38" viewBox="0 0 70 38">
+                  <use href="img/sprite.svg#logo-antarctic"></use>
+                </svg>
+                <span class="visually-hidden">Логотип компании.</span>
+              </a>
+            </div>
 
+            <button class="navigation__toggle" type="button">
+              <span class="visually-hidden">Открыть/закрыть меню.</span>
+            </button>
+
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Преимущества</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Направления</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Ближайшие круизы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="promo">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="./img/promo-bg-mobile.webp 1x, ./img/promo-bg-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="./img/promo-bg-tablet.webp 1x, ./img/promo-bg-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/promo-bg-desktop.webp 1x, ./img/promo-bg-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/promo-bg-mobile.jpg 1x, ./img/promo-bg-mobile@2x.jpg 2x" width="320" height="500">
+            <source media="(max-width: 1023px)" srcset="./img/promo-bg-tablet.jpg 1x, ./img/promo-bg-tablet@2x.jpg 2x" width="768" height="638">
+            <img class="promo__img" src="./img/promo-bg-desktop.jpg" srcset="./img/promo-bg-desktop@2x.jpg 2x" width="1366" height="650" alt="Заснеженные горные вершины на берегу океана.">
+          </picture>
+          <div class="promo__container container">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+          </div>
+        </section>
+
+        <section class="about">
+          <div class="about__container container">
+            <div class="about__content">
+              <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
+              <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+
+            <picture>
+              <source type="image/webp" srcset="./img/trips.webp 1x, ./img/trips@2x.webp 2x">
+              <img class="about__img" src="./img/trips.jpg" srcset="./img/trips@2x.jpg 2x" width="560" height="301" alt="Три пингвина стоят на снегу.">
+            </picture>
+          </div>
+        </section>
       </main>
-      <footer>
-        <div class="container"></div>
+
+      <footer class="main-footer">
+        <div class="main-footer__container container">
+          <div class="main-footer__logo">
+            <a class="main-footer__logo-link" href="#">
+              <svg class="main-footer__logo-img" width="70" height="38" viewBox="0 0 70 38">
+                <use href="img/sprite.svg#logo-antarctic"></use>
+              </svg>
+              <span class="visually-hidden">Логотип компании.</span>
+            </a>
+          </div>
+
+          <div class="main-footer__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Преимущества</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Направления</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Ближайшие круизы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" width="12" height="20" viewBox="0 0 12 20">
+                    <use href="img/sprite.svg#ok"></use>
+                  </svg>
+                  <span class="visually-hidden">Одноклассники.</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20">
+                    <use href="img/sprite.svg#dzen"></use>
+                  </svg>
+                  <span class="visually-hidden">Дзен.</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg class="social__icon" width="20" height="20" viewBox="0 0 20 20">
+                    <use href="img/sprite.svg#reddit"></use>
+                  </svg>
+                  <span class="visually-hidden">Reddit.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
 
