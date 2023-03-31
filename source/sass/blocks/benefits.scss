@@ -1,0 +1,151 @@
+.benefits {
+  width: 100%;
+  min-height: 562px;
+  padding: 111px 0 120px;
+  background-color: $color-solitude;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+
+  @include retina-bg(benefits-bg-desktop);
+}
+
+.benefits__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1260px;
+}
+
+.benefits h2 {
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.benefits__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.benefits__item {
+  padding: 30px 30px 45px;
+  background-color: $color-alice-blue;
+}
+
+.benefits__icon {
+  display: block;
+  margin-bottom: 19px;
+}
+
+.benefits__item h3 {
+  margin: 0;
+  margin-bottom: 7px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.benefits__item p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@include vp-1023 {
+  .benefits {
+    min-height: 588px;
+    padding: 90px 0 100px;
+
+    @include retina-bg(benefits-bg-tablet);
+  }
+
+  .benefits h2 {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .benefits__list {
+    gap: 30px;
+  }
+
+  .benefits__item {
+    padding: 26px 16px 20px 20px;
+  }
+
+  .benefits__icon {
+    margin-bottom: 18px;
+    height: 26px;
+
+    &--liner {
+      width: 21px;
+    }
+
+    &--all-inclusive {
+      width: 27px;
+    }
+
+    &--boat {
+      width: 36px;
+    }
+  }
+
+  .benefits__item h3 {
+    margin-bottom: 10px;
+    line-height: 25px;
+  }
+}
+
+@include vp-767 {
+  .benefits {
+    min-height: auto;
+    padding: 56px 0 65px;
+
+    @include retina-bg(benefits-bg-mobile);
+  }
+
+  .benefits h2 {
+    margin-bottom: 31px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .benefits__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .benefits__item {
+    padding: 25px 15px 19px 20px;
+  }
+
+  .benefits__icon {
+    margin-bottom: 19px;
+
+    &--all-inclusive {
+      margin-bottom: 21px;
+    }
+
+    &--boat {
+      margin-top: 1px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .benefits__item h3 {
+    max-width: 79%;
+    margin-bottom: 9px;
+  }
+}

@@ -1,26 +1,26 @@
-.btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px 9px;
+  background-color: $color-alice-blue;
+  font-family: $montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  color: $color-tangaroa;
+  text-align: center;
   border: none;
   cursor: pointer;
 
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 0 7px $color-alice-blue);
+    transition: 0.3s;
   }
 
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
+  &:active {
+    filter: drop-shadow(0 0 7px $color-alice-blue);
+    transition: 0.3s;
+    opacity: 0.7;
   }
 }
