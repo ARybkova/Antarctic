@@ -808,11 +808,6 @@ button,
 }
 
 .about {
-  width: 100%;
-  padding: 120px 0 145px;
-}
-
-.about__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -820,6 +815,8 @@ button,
   gap: 40px;
   width: 100%;
   max-width: 1260px;
+  margin: 0 auto;
+  padding: 120px 50px 145px;
 }
 
 .about__content {
@@ -929,11 +926,6 @@ button,
 }
 
 .catalog {
-  width: 100%;
-  padding: 86px 0 120px;
-}
-
-.catalog__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -946,6 +938,8 @@ button,
   align-items: center;
   width: 100%;
   max-width: 1260px;
+  margin: 0 auto;
+  padding: 86px 50px 120px;
 }
 
 .catalog h2 {
@@ -960,8 +954,7 @@ button,
 .catalog__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 30px;
   width: 100%;
   margin: 0;
@@ -972,14 +965,14 @@ button,
 .catalog__item {
   position: relative;
   width: 100%;
-  max-width: 260px;
+  min-width: 260px;
   min-height: 386px;
 }
 
 .catalog__img {
   display: block;
-  width: 260px;
-  height: 386px;
+  width: 100%;
+  height: auto;
 }
 
 .catalog__item h3 {
@@ -1265,6 +1258,19 @@ button,
   opacity: 0.8;
 }
 
+.form__input .is-invalid {
+  color: #ff1553;
+}
+
+.form__input span {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  margin: 0;
+  font-size: 10px;
+  line-height: 12px;
+}
+
 .form__input--checkbox label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1311,7 +1317,8 @@ button,
   opacity: 0.8;
 }
 
-.form__input--checkbox p {
+.form__input--checkbox span {
+  position: initial;
   margin: 0;
   margin-top: 2px;
   padding: 0;
@@ -1321,30 +1328,12 @@ button,
   color: #f9fbfd;
 }
 
-.form__input .is-invalid {
-  color: #ff1553;
-}
-
-.form__input span {
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  margin: 0;
-  font-size: 10px;
-  line-height: 12px;
-}
-
 .form__button {
   margin-top: 11px;
   margin-bottom: 0;
 }
 
 .contacts {
-  width: 100%;
-  padding: 120px 0 120px;
-}
-
-.contacts__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1354,6 +1343,8 @@ button,
   gap: 100px;
   width: 100%;
   max-width: 1260px;
+  margin: 0 auto;
+  padding: 120px 50px 120px;
 }
 
 .contacts__map {
@@ -1675,14 +1666,11 @@ button,
   }
 
   .about {
-    padding: 100px 0 93px;
-  }
-
-  .about__container {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
     gap: 30px;
+    padding: 100px 45px 93px;
   }
 
   .about__content {
@@ -1749,7 +1737,7 @@ button,
   }
 
   .catalog {
-    padding: 90px 0 100px;
+    padding: 90px 45px 100px;
   }
 
   .catalog h2 {
@@ -1767,11 +1755,6 @@ button,
     width: 100%;
     min-width: 309px;
     max-width: 100%;
-    height: auto;
-  }
-
-  .catalog__img {
-    width: 100%;
     height: auto;
   }
 
@@ -1833,11 +1816,8 @@ button,
   }
 
   .contacts {
-    padding: 100px 0 100px;
-  }
-
-  .contacts__container {
     gap: 30px;
+    padding: 100px 45px 100px;
   }
 
   .contacts__map {
@@ -2151,10 +2131,6 @@ button,
   }
 
   .about {
-    padding: 65px 0 85.13px;
-  }
-
-  .about__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2166,6 +2142,7 @@ button,
     -ms-flex-align: center;
     align-items: center;
     gap: 44px;
+    padding: 65px 15px 85.13px;
   }
 
   .about__content {
@@ -2234,7 +2211,7 @@ button,
   }
 
   .catalog {
-    padding: 58px 0 65px;
+    padding: 58px 15px 65px;
   }
 
   .catalog h2 {
@@ -2256,11 +2233,6 @@ button,
 
   .catalog__item {
     min-width: 270px;
-    height: auto;
-  }
-
-  .catalog__img {
-    width: 100%;
     height: auto;
   }
 
@@ -2345,7 +2317,7 @@ button,
     height: 20px;
   }
 
-  .form__input--checkbox p {
+  .form__input--checkbox span {
     margin: 0;
     font-size: 10px;
     line-height: 12px;
@@ -2358,15 +2330,12 @@ button,
   }
 
   .contacts {
-    padding: 58px 0 61px;
-  }
-
-  .contacts__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 40px;
+    padding: 58px 15px 61px;
   }
 
   .contacts__map {
