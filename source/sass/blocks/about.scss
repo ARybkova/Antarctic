@@ -1,14 +1,11 @@
 .about {
-  width: 100%;
-  padding: 120px 0 145px;
-}
-
-.about__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   width: 100%;
   max-width: 1260px;
+  margin: 0 auto;
+  padding: 120px 50px 145px;
 }
 
 .about__content {
@@ -36,12 +33,9 @@
 
 @include vp-1023 {
   .about {
-    padding: 100px 0 93px;
-  }
-
-  .about__container {
     align-items: flex-start;
     gap: 30px;
+    padding: 100px 45px 93px;
   }
 
   .about__content {
@@ -57,14 +51,11 @@
 
 @include vp-767 {
   .about {
-    padding: 65px 0 85.13px;
-  }
-
-  .about__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 44px;
+    padding: 65px 15px 85.13px;
   }
 
   .about__content {
