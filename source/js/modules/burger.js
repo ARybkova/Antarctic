@@ -1,23 +1,22 @@
 export const toggleMenu = () => {
   const pageHeader = document.querySelector('.main-header');
   const navMain = document.querySelector('.navigation');
-  const navToggle = document.querySelector('.navigation__toggle');
-  const navLinks = navMain.querySelectorAll('.navigation__item');
-  const overlay = document.querySelector('.main-header__overlay');
 
-  const closeMenu = () => {
-    if (document.getElementsByClassName('.navigation')) {
+  if (pageHeader && navMain) {
+    const navToggle = document.querySelector('.navigation__toggle');
+    const navLinks = navMain.querySelectorAll('.navigation__item');
+    const overlay = document.querySelector('.main-header__overlay');
+
+    const closeMenu = () => {
       navMain.classList.remove('navigation--opened');
       navMain.classList.add('navigation--closed');
       document.body.style.overflow = 'visible';
       overlay.style.display = 'none';
-    }
-  };
+    };
 
-  navMain.classList.remove('navigation--nojs');
-  pageHeader.classList.remove('main-header--nojs');
+    navMain.classList.remove('navigation--nojs');
+    pageHeader.classList.remove('main-header--nojs');
 
-  if (document.getElementsByClassName('.navigation__toggle')) {
     navToggle.addEventListener('click', function () {
       if (navMain.classList.contains('navigation--closed')) {
         navMain.classList.remove('navigation--closed');
@@ -28,19 +27,18 @@ export const toggleMenu = () => {
         closeMenu();
       }
     });
-  }
 
-  if (navLinks.length > 0) {
+
     navLinks.forEach((navLink) => {
       navLink.addEventListener('click', closeMenu);
     });
+
+    overlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+    });
   }
-
-  overlay.addEventListener('click', closeMenu);
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      closeMenu();
-    }
-  });
 };

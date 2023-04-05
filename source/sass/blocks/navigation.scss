@@ -170,6 +170,8 @@
   .navigation__list {
     flex-direction: column;
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
   }
 
   .navigation--closed .navigation__item {
